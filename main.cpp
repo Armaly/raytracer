@@ -10,6 +10,7 @@ int main() {
 
     // Pixels written out in rows left to right
     for (int j = image_height-1; j >= 0; j--) {
+        std::cerr << "\rScanlines remaining: " << j << ' ' << std::flush;
 
     // Rows written out top to bottom
         for (int k = 0; k < image_width; k++) {
@@ -26,4 +27,6 @@ int main() {
             std::cout << ir << ' ' << ig << ' ' << ib << '\n';
         }
     }
+
+    std::cerr << "\nDone.\n";
 }
